@@ -247,6 +247,44 @@ By implementing these steps, organizations can enhance their preparedness for po
 
 Containment
 
+Containing an incident promptly is essential to limit damage and prevent further compromise of systems. Here’s a step-by-step outline of the containment and remediation process:
+
+1. Initial Containment
+   - Isolate Affected Systems: Disconnect compromised devices or network segments to prevent the spread of malware or unauthorized access. This may include disabling network access, taking systems offline, or blocking specific IP addresses.
+   - Activate Pre-Defined Incident Response Playbooks: Use established playbooks for the type of incident (e.g., ransomware, data exfiltration) to ensure a consistent and effective approach.
+   - Alert Stakeholders: Notify relevant teams and stakeholders, such as IT, security, and management, to ensure coordinated response efforts and resource allocation.
+
+ 2. Identify and Remove Malware**
+   - Malware Analysis: Identify the type of malware involved using endpoint detection and response (EDR) tools or sandbox environments for safe analysis.
+   - Malware Removal: Use anti-malware tools to scan affected systems and quarantine or remove the identified malware. In severe cases, consider re-imaging affected devices.
+   - Containment Verification: Confirm that no traces of malware remain by re-scanning systems and reviewing logs for any indications of residual malicious activity.
+
+### 3. **Close Vulnerabilities Exploited During the Incident**
+   - **Conduct Root Cause Analysis**: Identify the vulnerabilities or misconfigurations exploited by the attackers. This could involve weak passwords, unpatched software, or open network ports.
+   - **Patch and Update Systems**: Apply patches and updates to software, operating systems, and applications to eliminate the vulnerabilities. Ensure all systems are updated, not only the affected ones.
+   - **Reconfigure Security Controls**: Strengthen access controls, disable unnecessary services, close open ports, and implement additional firewall rules or network segmentation to reduce exposure.
+
+### 4. **Enhanced Monitoring for Indicators of Compromise (IOCs)**
+   - **Deploy Detection Rules for IOCs**: Use the indicators of compromise (e.g., IP addresses, file hashes, domain names) identified during the incident to create detection rules in SIEM and EDR systems.
+   - **Increase Monitoring Frequency**: Temporarily increase monitoring frequency to detect any further malicious activity quickly. Ensure alerting for unusual traffic, file changes, or access attempts.
+   - **Network Traffic Analysis**: Analyze network traffic for signs of data exfiltration, unusual connections, or communication with command-and-control (C2) servers.
+
+### 5. **Restore Affected Systems to a Known Good State**
+   - **Identify Clean Backups**: Locate recent, validated backups of the affected systems to ensure data integrity before restoration.
+   - **System Restoration**: Restore systems from clean backups and ensure they are fully patched and updated to prevent re-infection.
+   - **Verify System Integrity**: Run additional scans and validation checks on restored systems to confirm they are free of malicious code or remnants of the incident.
+
+### 6. **Strengthen Security Measures Post-Incident**
+   - **Review and Update Security Policies**: Revise policies and incident response plans based on lessons learned from the incident.
+   - **Implement Enhanced Authentication and Access Controls**: Enforce stronger authentication (e.g., multi-factor authentication) and implement least privilege access for critical systems.
+   - **Conduct Staff Awareness Training**: Educate employees on the attack vector and best practices to prevent similar incidents in the future.
+
+7. Document Actions and Findings**
+   - Maintain an Incident Report**: Document every step taken during containment, including detection methods, systems affected, vulnerabilities found, and remediation actions.
+   - **Review and Analyze the Incident**: Perform a post-incident review to identify root causes, areas for improvement, and additional steps to bolster defenses.
+   - **Generate an After-Action Report**: Create a final report to share with management and other stakeholders, outlining the incident, containment efforts, impact, and recommendations.
+
+By following these steps, the IR team can effectively contain the incident, restore normal operations, and implement preventive measures to reduce the risk of recurrence. This structured response also strengthens the organization’s overall security posture.
 
 
 
